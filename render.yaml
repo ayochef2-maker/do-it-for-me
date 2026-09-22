@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: do-it-for-me
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: "mkdir -p data"
+    startCommand: "node server.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OTP_DEV_MODE
+        value: "true"
+      - key: PAYSTACK_DEV_MODE
+        value: "true"
+      - key: DB_FILE
+        value: ./data/doitforme.sqlite
+      - key: APP_BASE_URL
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: TERMII_API_KEY
+        sync: false

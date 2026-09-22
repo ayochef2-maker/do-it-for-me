@@ -1,0 +1,24 @@
+{
+  "appId": "com.doitforme.app",
+  "appName": "DO IT FOR ME",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#0b63f6"
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "backgroundColor": "#0b63f6"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#0b63f6",
+      "showSpinner": false
+    }
+  }
+}
